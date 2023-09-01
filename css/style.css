@@ -464,6 +464,7 @@ figure .inner a:hover {
   margin-bottom: 20px;
   border-radius: 20px;
   background: url(../img/단청.jpg) no-repeat center/cover;
+  transition: 0.5s;
 }
 #tapmenu main nav ul li a {
   display: block;
@@ -479,22 +480,15 @@ figure .inner a:hover {
 #tapmenu main nav ul li a p {
   opacity: 0;
   z-index: -1;
-  transition: 0.5s;
   font: bold 24px/1 "Noto Serif KR";
   text-align: center;
   color: #000;
+  transition: 0.5s;
 }
-#tapmenu main nav ul li a:hover {
-  background-color: mintcream;
-}
-#tapmenu main nav ul li a:hover p {
-  opacity: 1;
-  z-index: 1;
-}
-#tapmenu main nav ul li.on {
+#tapmenu main nav ul li:hover, #tapmenu main nav ul li.on {
   background: mintcream;
 }
-#tapmenu main nav ul li.on p {
+#tapmenu main nav ul li:hover a p, #tapmenu main nav ul li.on a p {
   opacity: 1;
   z-index: 1;
 }
@@ -524,7 +518,7 @@ figure .inner a:hover {
 #tapmenu main section article .txt {
   width: 100%;
   height: 100%;
-  background-image: url(../../img/한지.jpg);
+  background-image: url(../img/한지.jpg);
   padding: 20px 20px;
 }
 #tapmenu main section article .txt h2 {
@@ -536,12 +530,21 @@ figure .inner a:hover {
 #tapmenu main section article .txt p {
   position: relative;
   top: 30px;
-  font: bold 16px/1.4 "Noto Serif KR";
+  font: bold 16px "Noto Serif KR";
   color: #000;
 }
 #tapmenu main section article.on {
   opacity: 1;
   z-index: 1;
+}
+#tapmenu main section article:nth-of-type(1) .txt p, #tapmenu main section article:nth-of-type(2) .txt p {
+  line-height: 1.4;
+}
+#tapmenu main section article:nth-of-type(3) .txt p {
+  line-height: 1.3;
+}
+#tapmenu main section article:nth-of-type(4) .txt p {
+  line-height: 1.7;
 }
 #tapmenu .title2 {
   position: absolute;

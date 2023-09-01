@@ -32,6 +32,7 @@
                     margin-bottom: 20px;
                     border-radius: 20px;
                     background: url(../img/단청.jpg) no-repeat center/cover;
+                    transition: 0.5s;
                     a {
                         display: block;
                         width: 100%;
@@ -45,24 +46,21 @@
                         p{
                             opacity: 0;
                             z-index: -1;
-                            transition: 0.5s;
                             font: bold 24px/1 "Noto Serif KR";
                             text-align: center;
                             color: #000;
+                            transition: 0.5s;
                         }
-                        &:hover{
-                            background-color: mintcream;
+                    }
+                    &:hover,
+                    &.on
+                    { 
+                        background: mintcream;
+                        a{
                             p{
                                 opacity: 1;
                                 z-index: 1;
                             }
-                        }
-                    }
-                    &.on{
-                        background: mintcream;
-                        p{
-                            opacity: 1;
-                            z-index: 1;
                         }
                     }
                 }
@@ -92,7 +90,7 @@
                 .txt{
                     width: 100%;
                     height: 100%;
-                    background-image: url(../../img/한지.jpg);
+                    background-image: url(../img/한지.jpg);
                     padding: 20px 20px;
                     h2{
                         position: relative;
@@ -103,13 +101,35 @@
                     p{
                         position: relative;
                         top: 30px;
-                        font: bold 16px/1.4 "Noto Serif KR";
+                        font: bold 16px "Noto Serif KR";
                         color: #000;
                     }
                 }
                 &.on {
                     opacity: 1;
                     z-index: 1;
+                }
+                &:nth-of-type(1),
+                &:nth-of-type(2){
+                    .txt{
+                        p{
+                            line-height: 1.4;
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    .txt{
+                        p{
+                            line-height: 1.3;
+                        }
+                    }
+                }
+                &:nth-of-type(4){
+                    .txt{
+                        p{
+                            line-height: 1.7;
+                        }
+                    }
                 }
             }
         }

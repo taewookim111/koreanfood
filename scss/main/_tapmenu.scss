@@ -1,0 +1,124 @@
+#tapmenu{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 140px;
+    .title1{
+        position: absolute;
+        top: 10%;
+        left: 40px;
+        font: bold 60px/1 "arial";
+        color: brown;;
+    }
+    main{
+        width: 1200px;
+        height: 500px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        nav{
+            width: 220px;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            ul {
+                width: 100%;
+                li {
+                    width: 100%;
+                    height: 100px;
+                    margin-bottom: 20px;
+                    border-radius: 20px;
+                    background: url(../img/단청.jpg) no-repeat center/cover;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 5px solid brown;
+                        border-radius: 10px;
+                        transition: 0.5s;
+                        p{
+                            opacity: 0;
+                            z-index: -1;
+                            transition: 0.5s;
+                            font: bold 24px/1 "Noto Serif KR";
+                            text-align: center;
+                            color: #000;
+                        }
+                        &:hover{
+                            background-color: mintcream;
+                            p{
+                                opacity: 1;
+                                z-index: 1;
+                            }
+                        }
+                    }
+                    &.on{
+                        background: mintcream;
+                        p{
+                            opacity: 1;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+        section {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin-left: 35px;
+            background: url(../img/streetfood.jpg) no-repeat center/cover ;
+            border-radius: 20px;
+            border: 6px solid burlywood;
+            overflow: hidden;
+            transition: 0.5s;
+            article {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                opacity: 0;
+                z-index: -1;
+                border-radius: 13px;
+                .txt{
+                    width: 100%;
+                    height: 100%;
+                    background-image: url(../../img/한지.jpg);
+                    padding: 20px 20px;
+                    h2{
+                        position: relative;
+                        text-align: center;
+                        font: bold 32px/1 "Noto Serif KR";
+                        color: #000;
+                    }
+                    p{
+                        position: relative;
+                        top: 30px;
+                        font: bold 16px/1.4 "Noto Serif KR";
+                        color: #000;
+                    }
+                }
+                &.on {
+                    opacity: 1;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .title2{
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        font: bold 60px/1 "arial";
+        color: brown;;
+    }
+}

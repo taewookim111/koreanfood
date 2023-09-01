@@ -1,0 +1,554 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header {
+  width: 100%;
+  z-index: 3;
+}
+header .inner {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+}
+header .inner h1 {
+  position: absolute;
+  left: 20%;
+  bottom: 25%;
+}
+header .inner h1 a {
+  font: bold 24px/1 "arial";
+  color: #000;
+}
+header .inner .menuWeb {
+  transition: 1s;
+}
+header .inner .menuWeb #gnb {
+  position: absolute;
+  left: 50%;
+  bottom: 13%;
+}
+header .inner .menuWeb #gnb li {
+  float: left;
+}
+header .inner .menuWeb #gnb li a {
+  display: block;
+  padding: 15px 40px;
+  font: bold 16px/1 "Noto Serif KR";
+  color: #111;
+}
+header .inner .menuWeb #gnb li a:hover {
+  background-color: #444;
+  color: #fff;
+  opacity: 0.8;
+}
+header .inner .menuWeb .util {
+  position: absolute;
+  top: 14px;
+  right: 100px;
+  z-index: 3;
+}
+header .inner .menuWeb .util li {
+  float: left;
+  margin-left: 20px;
+}
+header .inner .menuWeb .util li a {
+  font: bold 12px/1 "Noto Serif KR";
+  color: #000;
+}
+
+#slider {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 150px;
+}
+#slider .title {
+  font: bold 150px/1 "arial";
+  color: #999;
+  position: relative;
+}
+#slider .panel {
+  width: 400%;
+  height: 100%;
+  transition: 0.6s;
+  position: relative;
+}
+#slider .panel li {
+  width: 25%;
+  height: 100%;
+  float: left;
+  padding: 0px 2px;
+}
+#slider .panel li h2 {
+  position: relative;
+  font: bold 250px/1 "Noto Serif KR";
+  color: mintcream;
+  position: absolute;
+  top: 3px;
+  margin-left: 15%;
+}
+#slider .panel li p {
+  position: relative;
+  font: bold 150px/1 "Noto Serif KR";
+  color: mintcream;
+  position: absolute;
+  bottom: 190px;
+  margin-left: 14%;
+}
+#slider .panel li:nth-of-type(1) h2 {
+  margin-left: 20%;
+}
+#slider .panel li:nth-of-type(1) p {
+  margin-left: 18%;
+}
+#slider .panel li video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#slider .btns {
+  position: relative;
+  bottom: 30%;
+  left: 50%;
+}
+#slider .btns li {
+  float: left;
+  margin-right: 10px;
+}
+#slider .btns li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #999;
+  border-radius: 50%;
+}
+#slider .btns li.on a {
+  background-color: #fff;
+}
+
+#box {
+  width: 1500px;
+  height: 400px;
+  margin: 6% auto;
+}
+#box .inner {
+  width: 100%;
+  height: 100%;
+  background-color: #F0EAD6;
+}
+#box .inner h2 {
+  position: relative;
+  top: 8%;
+  left: 10%;
+  font: bold 24px/1 "Noto Serif KR";
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+#box .inner article {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  margin-top: 10px;
+  left: 5%;
+  float: left;
+}
+#box .inner article i {
+  position: relative;
+  left: 35%;
+  font-size: 100px;
+  margin-bottom: 15px;
+}
+#box .inner article p {
+  font: bold 16px/1 "Noto Serif KR";
+  margin-top: 20px;
+  text-align: center;
+}
+#box .inner a {
+  position: absolute;
+  left: 18%;
+  margin-top: 235px;
+  font: bold 15px/1.2 "Noto Serif KR";
+  padding: 10px 30px;
+  border: 1px solid #888;
+  color: #000;
+}
+#box .inner a:hover {
+  background-color: #666;
+  color: #fff;
+  border: 1px solid gray;
+}
+#box .inner .rice {
+  position: absolute;
+  right: 23%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  z-index: 3;
+}
+#box .inner .wood {
+  position: relative;
+  top: -83px;
+  right: -230px;
+  width: 370px;
+  height: 399px;
+}
+
+footer {
+  width: 100%;
+  padding: 40px;
+  background-color: #444;
+}
+footer .inner {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .inner h1 {
+  font: bold 30px/1 "arial";
+  color: mintcream;
+  margin-bottom: 10px;
+}
+footer .inner ul {
+  margin-top: 20px;
+  display: flex;
+  float: left;
+  gap: 15px;
+}
+footer .inner ul li {
+  background-color: #777;
+  margin-bottom: 15px;
+}
+footer .inner ul li a {
+  padding: 30px;
+  color: mintcream;
+  font: bold 13px/30px "Noto Serif KR";
+}
+footer .inner address {
+  width: 100%;
+  font: 14px/1.3 "arial";
+  color: #bbb;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+footer .inner p {
+  width: 100%;
+  font: 12px/1 "arial";
+  color: #777;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+figure {
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  background-color: #333;
+}
+figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+figure .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+figure .inner h2 {
+  font: normal 120px/1 "arial";
+  color: #fff;
+  margin-bottom: 5px;
+}
+figure .inner span {
+  display: block;
+  font: normal 36px/1 "Noto Serif KR";
+  color: #fff;
+  margin-bottom: 80px;
+}
+figure .inner p {
+  font: 18px/1.4 "Noto Serif KR";
+  color: #fff;
+  margin-bottom: 100px;
+}
+figure .inner a {
+  display: block;
+  width: 400px;
+  height: 35px;
+  border: 1px solid #bbb;
+  text-align: center;
+  font: bold 14px/35px "Noto Serif KR";
+  color: #fff;
+}
+figure .inner a:hover {
+  background-color: #fff;
+  color: #444;
+}
+
+#metro nav {
+  width: 100%;
+  padding: 20px 10vw;
+  display: flex;
+  gap: 40px;
+}
+#metro nav a {
+  font: 20px/1 "arial";
+  color: #999;
+}
+#metro nav a.on {
+  color: #000;
+}
+#metro section {
+  display: none;
+  padding: 5px;
+}
+#metro section.on {
+  display: block;
+}
+#metro section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#metro section article {
+  width: 25%;
+  height: 25vw;
+  float: left;
+  padding: 5px;
+}
+#metro section article .inner {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.5s;
+}
+#metro section.active article .inner {
+  opacity: 1;
+  transform: scale(1);
+}
+#metro section article {
+  width: 50%;
+}
+#metro section article h2 {
+  position: relative;
+  top: 20px;
+  margin-left: 5%;
+  font: bold 150px/1 "arial";
+}
+#metro section article .inner {
+  overflow: hidden;
+}
+#metro section article .inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#news {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 180px;
+}
+#news .inner {
+  width: 1420px;
+  margin: 0 auto;
+  position: relative;
+}
+#news .inner h1 {
+  font: bold 44px/1 "arial";
+  color: #333;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+#news .inner .wrap {
+  width: 100%;
+}
+#news .inner .wrap article {
+  width: 280px;
+  float: left;
+  margin-right: 100px;
+}
+#news .inner .wrap article:last-child {
+  margin-right: 0px;
+}
+#news .inner .wrap article .pic {
+  width: 100%;
+  height: 140px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#news .inner .wrap article .pic:hover img {
+  transform: scale(1.2);
+}
+#news .inner .wrap article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+#news .inner .wrap article h2 {
+  margin-bottom: 10px;
+  font: bold 20px/1 "arial";
+}
+#news .inner .wrap article p {
+  font: 17px/1 "Noto Serif KR";
+  color: #111;
+}
+
+#tapmenu {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 140px;
+}
+#tapmenu .title1 {
+  position: absolute;
+  top: 10%;
+  left: 40px;
+  font: bold 60px/1 "arial";
+  color: brown;
+}
+#tapmenu main {
+  width: 1200px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#tapmenu main nav {
+  width: 220px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+#tapmenu main nav ul {
+  width: 100%;
+}
+#tapmenu main nav ul li {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: url(../img/단청.jpg) no-repeat center/cover;
+}
+#tapmenu main nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid brown;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#tapmenu main nav ul li a p {
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+  font: bold 24px/1 "Noto Serif KR";
+  text-align: center;
+  color: #000;
+}
+#tapmenu main nav ul li a:hover {
+  background-color: mintcream;
+}
+#tapmenu main nav ul li a:hover p {
+  opacity: 1;
+  z-index: 1;
+}
+#tapmenu main nav ul li.on {
+  background: mintcream;
+}
+#tapmenu main nav ul li.on p {
+  opacity: 1;
+  z-index: 1;
+}
+#tapmenu main section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-left: 35px;
+  background: url(../img/streetfood.jpg) no-repeat center/cover;
+  border-radius: 20px;
+  border: 6px solid burlywood;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#tapmenu main section article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 13px;
+}
+#tapmenu main section article .txt {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/한지.jpg);
+  padding: 20px 20px;
+}
+#tapmenu main section article .txt h2 {
+  position: relative;
+  text-align: center;
+  font: bold 32px/1 "Noto Serif KR";
+  color: #000;
+}
+#tapmenu main section article .txt p {
+  position: relative;
+  top: 30px;
+  font: bold 16px/1.4 "Noto Serif KR";
+  color: #000;
+}
+#tapmenu main section article.on {
+  opacity: 1;
+  z-index: 1;
+}
+#tapmenu .title2 {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font: bold 60px/1 "arial";
+  color: brown;
+}
+
+/*# sourceMappingURL=style.css.map */
